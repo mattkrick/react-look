@@ -10,6 +10,7 @@
     "coverage": "codeclimate-test-reporter < coverage/lcov.info",
     "demo": "webpack-dev-server --config webpack.config.demo.js --no-info --content-base packages/react-look/demo/",
     "demo:universal": "concurrent --kill-others \"npm run demo\" \"babel-node packages/react-look/demo/server.js\"",
+    "build:server": "NODE_ENV=production webpack --config ./packages/react-look/demo/server.babel.js",
     "lint": "./scripts/lintPackages.sh",
     "prepare": "babel-node scripts/preparePackages.js",
     "prerelease": "npm run clean && npm run lint && npm test && npm run build && npm run prepare",
@@ -78,7 +79,7 @@
     "react-native": "^0.20.0",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
-    "webpack": "^1.12.11",
+    "webpack": "^2.1.0-beta.6",
     "webpack-dev-middleware": "^1.5.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.6.0"
